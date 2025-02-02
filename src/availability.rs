@@ -36,7 +36,7 @@ impl Availability {
 }
 
 #[derive(Debug, Serialize, Deserialize, PartialEq, Clone, Copy)]
-#[serde(untagged, rename_all = "snake_case")]
+#[serde(rename_all = "snake_case")]
 pub enum AvailabilityMode {
     All,
     Any,

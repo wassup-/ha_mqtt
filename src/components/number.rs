@@ -232,7 +232,7 @@ impl<'a> Number<'a> {
 }
 
 #[derive(Debug, Serialize, PartialEq, Clone, Copy)]
-#[serde(untagged, rename_all = "snake_case")]
+#[serde(rename_all = "snake_case")]
 pub enum NumberClass {
     #[serde(rename = "None")]
     None,
@@ -287,14 +287,14 @@ pub enum NumberClass {
     WindSpeed,
 }
 #[derive(Debug, Clone, PartialEq, Serialize)]
-#[serde(untagged, rename_all = "snake_case")]
+#[serde(rename_all = "snake_case")]
 pub enum NumberEntityCategory {
     Diagnostic,
     Config,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize)]
-#[serde(untagged, rename_all = "snake_case")]
+#[serde(rename_all = "snake_case")]
 pub enum NumberMode {
     Auto,
     Box,

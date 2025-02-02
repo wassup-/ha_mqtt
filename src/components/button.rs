@@ -25,6 +25,7 @@ pub struct Button<'a> {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub device: Option<&'a Device>,
 
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub device_class: Option<ButtonClass>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -166,7 +167,7 @@ impl<'a> Button<'a> {
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize)]
-#[serde(untagged, rename_all = "snake_case")]
+#[serde(rename_all = "snake_case")]
 pub enum ButtonClass {
     #[serde(rename = "None")]
     None,
@@ -176,7 +177,7 @@ pub enum ButtonClass {
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize)]
-#[serde(untagged, rename_all = "snake_case")]
+#[serde(rename_all = "snake_case")]
 pub enum ButtonEntityCategory {
     Config,
     Diagnostic,
