@@ -169,8 +169,6 @@ impl<'a> Button<'a> {
 #[derive(Debug, Clone, PartialEq, Serialize)]
 #[serde(rename_all = "snake_case")]
 pub enum ButtonClass {
-    #[serde(rename = "None")]
-    None,
     Identify,
     Restart,
     Update,

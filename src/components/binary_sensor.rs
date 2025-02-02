@@ -247,8 +247,6 @@ impl NodeId for BinarySensor<'_> {
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum BinarySensorClass {
-    #[serde(rename = "None")]
-    None,
     Battery,
     BatteryCharging,
     CarbonMonoxide,

@@ -66,8 +66,6 @@ pub struct Event<'a> {
 #[derive(Debug, Clone, PartialEq, Serialize)]
 #[serde(rename_all = "snake_case")]
 pub enum EventClass {
-    #[serde(rename = "None")]
-    None,
     Button,
     Doorbell,
     Motion,

@@ -234,8 +234,6 @@ impl<'a> Number<'a> {
 #[derive(Debug, Serialize, PartialEq, Clone, Copy)]
 #[serde(rename_all = "snake_case")]
 pub enum NumberClass {
-    #[serde(rename = "None")]
-    None,
     ApparentPower,
     Aql,
     AtmosphericPressure,

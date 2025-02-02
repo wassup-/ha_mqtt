@@ -223,8 +223,6 @@ pub enum SensorEntityCategory {
 #[derive(Debug, Clone, PartialEq, Serialize)]
 #[serde(rename_all = "snake_case")]
 pub enum SensorClass {
-    #[serde(rename = "None")]
-    None,
     ApparentPower,
     Aql,
     AtmosphericPressure,
